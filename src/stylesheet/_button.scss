@@ -1,0 +1,39 @@
+/* button-base */
+.zys-button-base {
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* button-size */
+.zys-button {
+  &-default {
+    font-size: 16px;
+    padding: 16px 32px;
+  }
+  &-min {
+    font-size: 8px;
+    padding: 8px 16px;
+  }
+  &-max {
+    font-size: 32px;
+    padding: 32px 64px;
+  }
+}
+
+/* button-type */
+.zys-button {
+  &-success {
+    background-color: #00FF00;
+  }
+
+  &-warn {
+    background-color: #FF0000;
+  }
+
+  &-info {
+    background-color: #0000FF
+  }
+}

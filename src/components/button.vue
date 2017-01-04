@@ -3,8 +3,9 @@
     :class="[
       'zys-button-base',
       size? 'zys-button-' + size : '',
-      type? 'zys-button-' + type : ''
+      buttonType? 'zys-button-' + buttonType : ''
     ]"
+    @click="triggerOpen"
     type="button">{{ value }}</button>
 </template>
 
@@ -16,7 +17,7 @@
         required: true,
         default: 'button'
       },
-      type: {
+      buttonType: {
         type: String,
         required: false,
         default: 'success'
@@ -25,6 +26,11 @@
         type: String,
         required: false,
         default: 'default'
+      }
+    },
+    methods: {
+      triggerOpen () {
+        this.$emit('open')
       }
     }
   }

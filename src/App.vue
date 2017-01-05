@@ -16,11 +16,6 @@
 </template>
 
 <script>
-import example from './components/example.vue'
-// import trans from './components/transition.vue'
-import zysButton from './components/button.vue'
-import Message from './components/message'
-
 export default {
   name: 'app',
   data () {
@@ -28,10 +23,6 @@ export default {
       msg: 'Show Parent Msg',
       show: 'none'
     }
-  },
-  components: {
-    example,
-    zysButton
   },
   methods: {
     showInfo () {
@@ -48,7 +39,7 @@ export default {
       })
     },
     open () {
-      Message.error({
+      this.$message({
         message: 'open info',
         type: 'error',
         showClose: true

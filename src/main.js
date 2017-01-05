@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import './stylesheet/index.scss'
+import Zys from './zys.js'
+
+Zys.install(Vue)
 
 /* eslint-disable no-new */
 new Vue({

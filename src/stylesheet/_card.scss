@@ -33,5 +33,16 @@
 .zys_card_link_item {
   padding:1px 10px;
   margin-bottom:2px;
-  background-color: ghostwhite;
+  a {
+     text-decoration: none;
+  }
+  :hover {
+    background-color: lightgreen;
+  }
+  &_even {
+    background-color: aliceblue;
+  }
+  &_odd {
+    background-color: lightblue;
+  }
 }

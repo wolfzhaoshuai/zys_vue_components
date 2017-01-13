@@ -11,7 +11,12 @@
     <hr>
     <zys-button buttonType="info" value="zys" @open="open"></zys-button>
     <hr>
-
+    <zys-card :card_outer_links="card_outer_links1">
+      <template slot="card_title">网络诊断</template>
+    </zys-card>
+    <zys-card :card_outer_links="card_outer_links1">
+      <template slot="card_title">网络诊断</template>
+    </zys-card>
   </div>
 </template>
 
@@ -21,7 +26,17 @@ export default {
   data () {
     return {
       msg: 'Show Parent Msg',
-      show: 'none'
+      show: 'none',
+      card_outer_links1: [
+        {
+          'name': 'https://vuefe.cn/v2/guide/',
+          'title': 'Vue2中文'
+        },
+        {
+          'name': 'https://router.vuejs.org/zh-cn/',
+          'title': 'Vue-router'
+        }
+      ]
     }
   },
   methods: {

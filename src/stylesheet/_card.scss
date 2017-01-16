@@ -11,13 +11,14 @@
 .zys_card_header {
   height: 30px;
   background:lightblue;
-  padding: 10px 0;
+  padding: 5px 0;
   text-align: center;
 }
 
 .zys_card_content {
   padding:5px 0px;
   font-size: 13px;
+  text-align: left;
 }
 
 .zys_card_content a {
@@ -30,14 +31,19 @@
   font-family: serif;
 }
 
+.zys_card_img {
+  vertical-align: middle;
+}
+
 .zys_card_link_item {
   padding:1px 10px;
   margin-bottom:2px;
   a {
-     text-decoration: none;
-  }
-  :hover {
-    background-color: lightgreen;
+    display: block;
+    position: relative;
+    float: right;
+    width: 160px;
+    text-decoration: none;
   }
   &_even {
     background-color: aliceblue;

@@ -4,20 +4,23 @@
       width: card_width+'px'}">
       <div>
         <div class="zys_card_header">
-          <img :src="card_title_png">
+          <img  class="zys_card_img" :src="card_title_png">
           <span class="zys_card_title">
             <slot name="card_title"></slot>
           </span>
         </div>
-        <div class="home_card_content">
+        <div class="zys_card_content">
 
           <div v-for="(link, index) in card_inner_links"
           :class="[
             'zys_card_link_item',
             index%2 ==0 ? 'zys_card_link_item_even' : 'zys_card_link_item_odd'
           ]"
+          :id="'card_inner_link_item'+card_flag+index"
+          @mouseenter="onActive"
+          @mouseleave="offActive"
           >
-            <img :src="card_item_png">
+            <img class="zys_card_img" :src="card_item_png">
             <router-link :to="{ name: link.name }">{{ link.title }}</router-link>
           </div>
 
@@ -26,6 +29,9 @@
               'zys_card_link_item',
               index%2 ==0 ? 'zys_card_link_item_even' : 'zys_card_link_item_odd'
             ]"
+            :id="'card_outer_link_item'+card_flag+index"
+            @mouseenter="onActive"
+            @mouseleave="offActive"
             >
             <img :src="card_item_png">
             <a :href="link.name" target="_blank">{{ link.title }}</a>
@@ -61,6 +67,20 @@ export default {
     },
     card_item_png: {
       required: false
+    },
+    card_flag: {
+      type: Number,
+      required: true
+    }
+  },
+  methods: {
+    onActive (event) {
+      let targetId = event.target.getAttribute('id')
+      document.getElementById(targetId).style.cssText = 'background-color: #ccc'
+    },
+    offActive (event) {
+      let targetId = event.target.getAttribute('id')
+      document.getElementById(targetId).style.cssText = 'background-color: '
     }
   }
 }

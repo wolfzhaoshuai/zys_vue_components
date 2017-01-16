@@ -12,15 +12,17 @@
     <zys-button buttonType="info" value="zys" @open="open"></zys-button>
     <hr>
     <zys-card
-      :card_outer_links="card_outer_links1"
+      :card_outer_links="card_outer_links11"
       :card_item_png="card_item_png"
-      :card_title_png="card_title_png11">
+      :card_title_png="card_title_png11"
+      :card_flag="11">
       <template slot="card_title">网络诊断</template>
     </zys-card>
     <zys-card
-      :card_outer_links="card_outer_links1"
+      :card_outer_links="card_outer_links11"
       :card_item_png="card_item_png"
-      :card_title_png="card_title_png11">
+      :card_title_png="card_title_png11"
+      :card_flag="12">
       <template slot="card_title">网络诊断</template>
     </zys-card>
   </div>
@@ -37,7 +39,7 @@ export default {
       show: 'none',
       card_title_png11: TitleDiagnose,
       card_item_png: CardItem,
-      card_outer_links1: [
+      card_outer_links11: [
         {
           'name': 'https://vuefe.cn/v2/guide/',
           'title': 'Vue2中文'

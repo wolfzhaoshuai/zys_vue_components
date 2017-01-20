@@ -1,8 +1,10 @@
 <template>
   <div>
-    <slot name="title"></slot>
-    <p @click="emitParent">{{ msg }}</p>
-    <p @click="emitHide">Hide Msg</p>
+    <p class="example-p">
+      <slot name="title"></slot>
+    <p>
+    <p @click="emitParent" class="example-p">{{ msg }}</p>
+    <p @click="emitHide" class="example-p">Hide Msg</p>
   </div>
 </template>
 

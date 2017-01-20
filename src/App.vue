@@ -3,7 +3,7 @@
     <example :msg="msg" @showMsg="showInfo" @hideMsg="hideInfo">
       <template slot="title">Hello Vue2.x</template>
     </example>
-    <p :style="{ display: show }">This is a msg in father but emited by child</p>
+    <p  :style="{ display: show }" class="example-p">This is a msg in father but emited by child</p>
     <hr>
     <div>
       <span @click="updateMsg">UpdateMsg</span>
@@ -29,10 +29,14 @@
 </template>
 
 <script>
+import Example from './components/example.vue'
 import TitleDiagnose from './assets/images/title_diagnose.png'
 import CardItem from './assets/images/card_item.png'
 export default {
   name: 'app',
+  components: {
+    Example
+  },
   data () {
     return {
       msg: 'Show Parent Msg',

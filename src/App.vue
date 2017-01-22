@@ -12,6 +12,7 @@
     <zys-button buttonType="info" value="zys" @open="open"></zys-button>
     <hr>
     <zys-card
+      stripped
       :card_outer_links="card_outer_links11"
       :card_item_png="card_item_png"
       :card_title_png="card_title_png11"
@@ -19,6 +20,7 @@
       <template slot="card_title">网络诊断</template>
     </zys-card>
     <zys-card
+      stripped
       :card_outer_links="card_outer_links11"
       :card_item_png="card_item_png"
       :card_title_png="card_title_png11"

@@ -14,7 +14,7 @@
           <div v-for="(link, index) in card_inner_links"
           :class="[
             'zys_card_link_item',
-            index%2 ==0 ? 'zys_card_link_item_even' : 'zys_card_link_item_odd'
+            stripped && index%2 ==0 ? 'zys_card_link_item_even' : 'zys_card_link_item_odd'
           ]"
           :id="'card_inner_link_item'+card_flag+index"
           @mouseenter="onActive"
@@ -27,7 +27,7 @@
           <div v-for="(link, index) in card_outer_links"
             :class="[
               'zys_card_link_item',
-              index%2 ==0 ? 'zys_card_link_item_even' : 'zys_card_link_item_odd'
+              stripped && index%2 ==0 ? 'zys_card_link_item_even' : 'zys_card_link_item_odd'
             ]"
             :id="'card_outer_link_item'+card_flag+index"
             @mouseenter="onActive"
@@ -51,6 +51,11 @@ export default {
     card_outer_links: {
       type: Array,
       required: false
+    },
+    stripped: {
+      type: Boolean,
+      required: false,
+      default: false
     },
     card_height: {
       type: Number,

@@ -31,14 +31,10 @@
 </template>
 
 <script>
-import Example from './components/example.vue'
 import TitleDiagnose from './assets/images/title_diagnose.png'
 import CardItem from './assets/images/card_item.png'
 export default {
   name: 'app',
-  components: {
-    Example
-  },
   data () {
     return {
       msg: 'Show Parent Msg',

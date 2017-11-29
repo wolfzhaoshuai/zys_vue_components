@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     p.example-p
-      <slot name="title"><slot>
+      <slot name="title"></slot>
     p.example-p(@click="emitParent")
       | {{ msg }}
     p.example-p(@click="emitHide")
